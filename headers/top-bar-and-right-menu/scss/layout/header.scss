@@ -1,0 +1,77 @@
+
+// top bar
+.top-bar {
+    background-color: $menu-bg-color;
+    text-align: center;
+}
+.top-bar .layout-container-inner {
+    padding: .5em;
+}
+.top-bar,
+.top-bar a {
+    color: $header-text-color;
+}
+.top-bar a {
+    margin-right: 1em;
+    text-decoration: none;
+}
+.top-bar a:last-child {
+    margin-right: 0;
+}
+@include breakpoint(md) {
+    .top-bar-left {
+        float: left;
+    }
+    .top-bar-right {
+        float: right;
+    }
+}
+
+// Outer header
+#header {
+    background: $header-bg-color;
+}
+
+// Links colors
+/* split out for links (else ie7 wouldnt inherit it) */
+#header,
+#header .h1,
+#header .h2,
+#header .h3,
+#header a {
+    color: $header-text-color;
+    text-decoration: none;
+}
+
+// center header content by default
+.header-logo {
+    display: block;
+    text-align: center;
+}
+.header-logo img {
+    display: inline-block;
+}
+.header-nav-icons {
+    text-align: center;
+}
+
+// on cms it shows phone & email in the top bar area
+// if header phone/email text gets too big for the screensize, break the words
+.header-phone,
+.header-email {
+    word-break: break-word;
+}
+
+@include breakpoint (md) {
+
+    // undo centering header content
+    .header-logo,
+    .header-nav-icons {
+        text-align: left;
+    }
+
+    // float the logo to the left & details or search box to the right
+    .header-logo {
+        float: left;
+    }
+}

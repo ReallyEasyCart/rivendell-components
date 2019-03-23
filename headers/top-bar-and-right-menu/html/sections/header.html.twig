@@ -1,0 +1,86 @@
+
+<!-- Top bar -->
+<div class="top-bar layout-container" role="banner">
+    <div class="layout-container-inner clearfix">
+        <div class="top-bar-right">
+            {% if setup.show_facebook %}<a href="{{ setup.facebook_url }}"><i class="fa fa-facebook"></i></a>{% endif %}
+            {% if setup.show_twitter %}<a href="{{ setup.twitter_url }}"><i class="fa fa-twitter"></i></a>{% endif %}
+            {% if setup.show_instagram %}<a href="{{ setup.instagram_url }}"><i class="fa fa-instagram"></i></a>{% endif %}
+            {% if setup.show_pinterest %}<a href="{{ setup.pinterest_url }}"><i class="fa fa-pinterest-p"></i></a>{% endif %}
+            {% if setup.show_youtube %}<a href="{{ setup.youtube_url }}"><i class="fa fa-youtube"></i></a>{% endif %}
+            {% if setup.show_linkedin %}<a href="{{ setup.linkedin_url }}"><i class="fa fa-linkedin"></i></a>{% endif %}
+        </div>
+        <div class="top-bar-left">
+            {% if setup.is_cms %}
+
+                <!-- Phone number -->
+                <a href="tel:{{ company.phone_number }}" class="header-phone">
+                    <i class="fa fa-phone"></i>
+                    {{ company.phone_number }}
+                </a>
+                <!-- Email -->
+                <a href="mailto:{{ company.email | safe_email }}" class="header-email">
+                    <i class="fa fa-envelope"></i>
+                    {{ company.email | safe_email }}
+                </a>
+
+            {% else %}
+
+                <a href="/shop.php?p=view_cart" class="open-cart">View Cart
+                    <span data-format="(%d)" class="cart-qty">{% if cart.qty != 0 %}({{ cart.qty }}){% endif %}</span>
+                </a>
+                <a href="/checkout.php">Checkout</a>
+                <a href="/customer_home.php?p=previous_buys">Track Orders</a>
+
+                {% if user.is_logged_in %}
+                    <a href="/admin/">Your Account</a>
+                    <a href="/pages/logout.php">Logout</a>
+                {% else %}
+                    <a href="/login.php">Login</a>
+                {% endif %}
+
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+<!-- Header content -->
+<header id="header" class="layout-container" role="banner">
+    <div class="layout-container-inner clearfix">
+
+        <!-- Logo -->
+        <a class="header-logo" href="{{ directory }}">
+            {% if company.logo_image %}
+                <img src="{{ company.logo_image }}" alt="{{ company.name }}">
+            {% else %}
+                <span class="header-title h1">{{ company.name }}</span>
+                <span class="header-slogan h3">{{ company.slogan }}</span>
+            {% endif %}
+        </a>
+
+        <!-- nav icons -->
+        <div class="header-nav-icons">
+
+            <!-- Cart -->
+            <div class="nav-icon header-cart cart-show-if-not-empty" {% if cart.qty == 0 %}style="display:none;"{% endif %}>
+                <a href="/shop.php?p=view_cart" class="open-cart">
+                    <i class="fa fa-shopping-cart"></i>
+                    <strong class="cart-qty">{{ cart.qty }}</strong> items in cart
+                </a>
+                - <a href="/checkout.php">Checkout</a>
+            </div>
+
+            <a data-toggle=".header-nav" class="nav-icon nav-toggle-icon">
+                <i class="fa fa-bars fa-lg"></i>
+                <span>Menu</span>
+            </a>
+
+        </div>
+
+        <!-- Main menu / nav -->
+        <nav class="header-nav nav nav-sub-indicators nav-sub-indicator-arrows" id="navigation" role="navigation">
+            <ul class="nav-primary">{{ header.menu }}</ul>
+        </nav>
+
+    </div>
+</header>

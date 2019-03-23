@@ -1,0 +1,71 @@
+//
+// Nav layout
+//
+.nav-icon span {
+    display: inline-block;
+}
+
+// smooth transition all nav prop changes
+.nav li,
+.nav a {
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+}
+
+// Set the menu background color
+#header nav ul {
+    background-color: $menu-bg-color;
+}
+@include breakpoint (md) {
+    #header .nav {
+        position: relative; // default in responsive-base is absolute but we want relative
+        left: 0;
+        right: 0;
+        float: right;
+        clear: none;
+    }
+    // strip the background color
+    #header nav > ul {
+        background-color: transparent;
+    }
+
+    // as this nav is floated right, sub sub links should pop to the left to avoid going off screen
+    .nav li ul ul {
+        left: -100%;
+    }
+
+    // switch the background colour to the links instead of list items
+    // this will let us target them easier for the rounding below
+    .nav-primary li:hover,
+    .nav-primary li.is-focused,
+    .nav-primary li.is-current {
+        background: transparent;
+    }
+    .nav-primary li:hover > a,
+    .nav-primary li.is-focused > a,
+    .nav-primary li.is-current > a {
+        background-color: $menu-bg-color;
+    }
+
+    // slightly round the corners
+    // remove all the below to cancel this rounding
+    .nav-primary > li:hover > a,
+    .nav-primary > li.is-focused > a,
+    .nav-primary > li.is-current > a { // round the links
+        border-radius: 5px;
+    }
+    #header .nav li ul { // cancel default ul borders
+        border: none;
+    }
+    // the following is to handle hovers wth sublinks
+    // set rounding on bottom only when it's an only child
+    .nav-primary > li:hover > a {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    .nav-primary > li:hover > a:only-child {
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+}
