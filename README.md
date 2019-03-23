@@ -7,8 +7,14 @@
 
 [Get Files](./headers/top-bar-and-right-menu/)
 
-![](./headers/top-bar-and-right-menu/screenshots/header-screenshot-desktop.png)
-![](./headers/top-bar-and-right-menu/screenshots/header-screenshot-mobile.png)
+CMS:
+![](./headers/top-bar-and-right-menu/screenshots/cms-header-desktop.png)
+
+Ecommerce:
+![](./headers/top-bar-and-right-menu/screenshots/ecom-header-desktop.png)
+
+![](./headers/top-bar-and-right-menu/screenshots/cms-header-mobile.png)
+![](./headers/top-bar-and-right-menu/screenshots/ecom-header-mobile.png)
 
 ## Footers
 
