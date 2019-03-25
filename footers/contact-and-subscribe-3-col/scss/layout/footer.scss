@@ -1,0 +1,27 @@
+
+/* Footer */
+#footer {
+    background-color: $footer-bg-color;
+    text-align: center;
+    @include breakpoint(md) {
+        text-align: left;
+    }
+
+    // set font color
+    &, a, h1, h2, h3 {
+        color: $footer-text-color;
+    }
+}
+
+.footer-logo {
+    display: inline-block;
+}
+
+// space out the links & icons
+#footer .inline-list a,
+#footer .fa {
+    margin-right: .5em;
+}
+.footer-social-icons a {
+    text-decoration: none;
+}
