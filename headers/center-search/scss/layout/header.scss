@@ -1,0 +1,66 @@
+
+// Outer header
+#header {
+    background: $header-bg-color;
+}
+
+// Links colors
+/* split out for links (else ie7 wouldnt inherit it) */
+#header,
+#header .h1,
+#header .h2,
+#header .h3,
+#header a {
+    color: $header-text-color;
+    text-decoration: none;
+}
+
+// center header content by default
+.header-logo {
+    display: block;
+    text-align: center;
+    @include breakpoint(md) {
+        text-align: left;
+    }
+}
+.header-logo img {
+    display: inline-block;
+}
+.header-section,
+.header-cart,
+.header-nav-icons {
+    text-align: center;
+}
+// middle verticle align the sections
+.header-section {
+    display: flex;
+    align-items: center;
+    > * {
+        flex: 1;
+        max-width: 100%;
+    }
+}
+
+// header search
+.header-search #search-q {
+    width: 25em;
+}
+
+// aside section
+.header-aside {
+    & a {
+        margin-left: 1em;
+        display: inline-block;
+    }
+    @include breakpoint(md) {
+        text-align: right;
+    }
+}
+
+
+// on cms it shows phone & email in the aside area
+// if header aside text gets too big for the screensize, break the words
+.header-aside-phone,
+.header-aside-email {
+    word-break: break-word;
+}

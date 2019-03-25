@@ -1,0 +1,96 @@
+
+/* === Base === */
+body {
+    font: 18px/1.6 'Lato', sans-serif;
+    background: #009688;
+    color: #FFF;
+    text-align: center;
+    padding: 2em;
+}
+
+h1, h2, h3 {
+    font-weight: 300;
+}
+
+a {
+    color: inherit;
+    font-weight: bold;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* === Layout === */
+.wrapper {
+    display: flex;
+    flex-flow: row wrap;
+}
+.wrapper > main {
+    flex: 3 0px;
+}
+
+.wrapper > aside {
+    width: 40%;
+    padding: 0 1em;
+    flex: 1 auto;
+    /* also position sticky to scroll */
+    align-self: flex-start;
+    position: sticky;
+    top: 1em;
+    /* and a large margin at the bottom to prevent the sticky layer  */
+}
+
+footer {
+    margin-top: 3em;
+}
+
+/* === Modules === */
+
+/* top right fork on github banner */
+.fork-on-github-banner {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/* builder / picker to select template */
+.builder {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.builder li {
+    display: block;
+    flex: 1;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    margin-bottom: 6px;
+}
+.builder li:hover {
+    border-color: #FFF;
+}
+.builder .selected {
+    background: #FFF;
+    color: #009688;
+}
+.builder img {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+/* instructions shown to user */
+.instructions {
+    margin: 0;
+    padding: 0;
+    /* as you want a list to line up, display as inline block to wrap size, left align it and bring the numbers inside the element */
+    display: inline-block;
+    text-align: left;
+    list-style-position: inside;
+}
+.instructions li {
+    margin-bottom: 1em;
+}
+.instructions code {
+    display: block;
+}
+

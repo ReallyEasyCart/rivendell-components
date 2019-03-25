@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>REC Rivendell Builder</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="./docs/builder.css">
+</head>
+<body>
+
+    <a class="fork-on-github-banner" href="https://github.com/ReallyEasyCart/rivendell-components">
+        <img width="149" height="149" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_darkblue_121621.png?resize=149%2C149" alt="Fork me on GitHub">
+    </a>
+
+    <header>
+        <h1>REC Rivendell Builder</h1>
+        <p>Pick and choose components for your responsive/rivendell theme.
+            <br>Instructions shown to help, but also you can change them up such as removing or adding sections or even combining elements from different templates.
+        </p>
+    </header>
+
+    <div id="app" class="wrapper">
+
+        <main>
+            <template v-for="(design, designKey) in designs">
+                <h2>{{ designKey | capitalize }}</h2>
+
+                <ul class="builder">
+                    <li v-for="(option, key) in design" @click="selected[designKey] = key" :class="{ selected: selected[designKey] == key }">
+                        <figure>
+                            <img :src="option.image">
+                            <figcaption v-html="option.name"></figcaption>
+                        </figure>
+                    </li>
+                </ul>
+            </template>
+        </main>
+
+        <aside>
+            <h2>Instructions</h2>
+            <p>
+                Follow these steps to add to your template:
+            </p>
+
+            <ol class="instructions">
+                <template v-for="(design, designKey) in designs">
+                    <li v-for="instruction in design[selected[designKey]].instructions" v-html="instruction"></li>
+                </template>
+            </ol>
+        </aside>
+
+    </div>
+
+    <footer>
+        <small>DISCLAIMER: REC Rivendell is the default responsive template for REC. 
+            <br>The above builder is designed to work with this template. It may work with other templates but we cannot guartee compatability.
+            <br>Code shown is provided as is, we are not responsible for fixing or maintaining it however if you <a href="#">open an issue</a> on the project we can help out</a>.</small>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.js"></script>
+    <script src="./docs/builder.js"></script>
+</body>
+</html>

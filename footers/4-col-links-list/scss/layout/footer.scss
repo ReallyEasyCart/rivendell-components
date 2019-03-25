@@ -1,0 +1,39 @@
+
+/* Footer */
+#footer {
+    background-color: $footer-bg-color;
+    text-align: left;
+}
+#footer,
+#footer a,
+#footer h1,
+#footer h2,
+#footer h3 {
+    color: $footer-text-color;
+}
+
+// remove the default darker background colour responsive-base gives by default
+.footer-social-links,
+.footer-copyright {
+    background-color: transparent;
+    // remove that default min height
+    min-height: auto;
+    // and center these
+    text-align: center;
+}
+
+// show the footer links side by side as inline-blocks
+.footer-link-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.footer-link-list,
+.footer-link-list li,
+.footer-link-list ul,
+.footer-link-list a {
+    display: block;
+}
+.footer-link-list ul {
+    padding-left: 1em;
+}

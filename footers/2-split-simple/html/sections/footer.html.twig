@@ -1,0 +1,37 @@
+
+<!-- Footer content -->
+<footer id="footer" role="contentinfo" class="layout-container">
+    <div class="layout-container-inner pure-g">
+
+        <div class="pure-u-1 pure-u-md-1-3">
+            <p>
+                <img class="footer-logo" src="{{ company.logo_image }}" alt="{{ company.name }}">
+            </p>
+
+            <p class="footer-social-icons">
+                {% include "html/sections/social-icons.html.twig" %}
+            </p>
+        </div>
+
+        <div class="pure-u-1 footer-right-side pure-u-md-2-3">
+
+            <ul class="inline-list">
+                {{ footer.menu }}
+            </ul>
+
+            <!-- copyright notice -->
+            <p>
+                <small>
+                    {{ COPYRIGHT_L }} {{ date.year }} {{ company.name }}. {{ FOOTER_ACM_LINE_1 }} {{ FOOTER_ACM_LINE_2 }} | 
+                    {% if TERMS_POLICY_URL %}<a href="{{ TERMS_POLICY_URL }}">Terms &amp; Conditions</a> |{% endif %}
+                    {% if PRIVACY_POLICY_URL %}<a href="{{ PRIVACY_POLICY_URL }}">Privacy Policy</a> |{% endif %}
+                    <a title="Review your cookie settings with our site." onclick="CookiePolicy.show(); return false;" href="#">Cookie Policy &amp; Settings</a>
+                    <br>Registered in England and Wales
+                    - Company Number: {{ company.company_reg_num }}
+                    - VAT Number: {{ company.vat_num }}
+                </small>
+            </p>
+        </div>
+
+    </div>
+</footer>
