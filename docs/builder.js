@@ -16,9 +16,9 @@ new Vue({
                     image: './headers/top-bar-and-right-menu/screenshots/cms-header-desktop.png',
                     instructions: [
                         'In the rivendell template, replace the following files:',
-                        'Replace html/sections/header.html.twig with <a href="./headers/top-bar-and-right-menu/html/sections/header.html.twig" target="_blank">this file content</a>',
-                        'Replace scss/layout/header.scss with <a href="./headers/top-bar-and-right-menu/scss/layout/header.scss" target="_blank">this file content</a>',
-                        'Replace scss/layout/header-nav.scss with <a href="./headers/top-bar-and-right-menu/scss/layout/header-nav.scss" target="_blank">this file content</a>',
+                        'Replace html/sections/header.html.twig with <a href="./headers/top-bar-and-right-menu/html/sections/header.html.twig" target="_blank" download>this file content</a>',
+                        'Replace scss/layout/header.scss with <a href="./headers/top-bar-and-right-menu/scss/layout/header.scss" target="_blank" download>this file content</a>',
+                        'Replace scss/layout/header-nav.scss with <a href="./headers/top-bar-and-right-menu/scss/layout/header-nav.scss" target="_blank" download>this file content</a>',
                     ],
                 },
                 'center-logo-3-col': {
@@ -26,9 +26,9 @@ new Vue({
                     image: './headers/center-logo-3-col/screenshots/header-center-logo-3col-desktop.png',
                     instructions: [
                         'In the rivendell template, replace the following files:',
-                        'Replace html/sections/header.html.twig with <a href="./headers/center-logo-3-col/html/sections/header.html.twig" target="_blank">this file content</a>',
-                        'Replace scss/layout/header.scss with <a href="./headers/center-logo-3-col/scss/layout/header.scss" target="_blank">this file content</a>',
-                        'Replace scss/layout/header-nav.scss with <a href="./headers/center-logo-3-col/scss/layout/header-nav.scss" target="_blank">this file content</a>',
+                        'Replace html/sections/header.html.twig with <a href="./headers/center-logo-3-col/html/sections/header.html.twig" target="_blank" download>this file content</a>',
+                        'Replace scss/layout/header.scss with <a href="./headers/center-logo-3-col/scss/layout/header.scss" target="_blank" download>this file content</a>',
+                        'Replace scss/layout/header-nav.scss with <a href="./headers/center-logo-3-col/scss/layout/header-nav.scss" target="_blank" download>this file content</a>',
                     ],
                 },
                 'center-search': {
@@ -36,9 +36,9 @@ new Vue({
                     image: './headers/center-search/screenshots/center-search-ecom-desktop-header.png',
                     instructions: [
                         'In the rivendell template, replace the following files:',
-                        'Replace html/sections/header.html.twig with <a href="./headers/center-search/html/sections/header.html.twig" target="_blank">this file content</a>',
-                        'Replace scss/layout/header.scss with <a href="./headers/center-search/scss/layout/header.scss" target="_blank">this file content</a>',
-                        'Replace scss/layout/header-nav.scss with <a href="./headers/center-search/scss/layout/header-nav.scss" target="_blank">this file content</a>',
+                        'Replace html/sections/header.html.twig with <a href="./headers/center-search/html/sections/header.html.twig" target="_blank" download>this file content</a>',
+                        'Replace scss/layout/header.scss with <a href="./headers/center-search/scss/layout/header.scss" target="_blank" download>this file content</a>',
+                        'Replace scss/layout/header-nav.scss with <a href="./headers/center-search/scss/layout/header-nav.scss" target="_blank" download>this file content</a>',
                     ],
                 },
             },
@@ -81,9 +81,9 @@ new Vue({
                     image: './footers/contact-and-subscribe-3-col/screenshots/contact-and-subscribe-3col-footer-desktop.png',
                     instructions: [
                         'In the rivendell template, replace the following files:',
-                        'Replace html/sections/footer.html.twig with <a href="./footers/contact-and-subscribe-3-col/html/sections/footer.html.twig" target="_blank">this file content</a>',
-                        'Replace html/sections/social-icons.html.twig with <a href="./footers/contact-and-subscribe-3-col/html/sections/social-icons.html.twig" target="_blank">this file content</a>',
-                        'Replace scss/layout/footer.scss with <a href="./footers/contact-and-subscribe-3-col/scss/layout/footer.scss" target="_blank">this file content</a>',
+                        'Replace html/sections/footer.html.twig with <a href="./footers/contact-and-subscribe-3-col/html/sections/footer.html.twig" target="_blank" download>this file content</a>',
+                        'Replace html/sections/social-icons.html.twig with <a href="./footers/contact-and-subscribe-3-col/html/sections/social-icons.html.twig" target="_blank" download>this file content</a>',
+                        'Replace scss/layout/footer.scss with <a href="./footers/contact-and-subscribe-3-col/scss/layout/footer.scss" target="_blank" download>this file content</a>',
                     ],
                 },
                 '2-split-simple': {
@@ -91,9 +91,9 @@ new Vue({
                     image: './footers/2-split-simple/screenshots/2-split-simpler-footer-desktop.png',
                     instructions: [
                         'In the rivendell template, replace the following files:',
-                        'Replace html/sections/footer.html.twig with <a href="./footers/2-split-simple/html/sections/footer.html.twig" target="_blank">this file content</a>',
-                        'Replace html/sections/social-icons.html.twig with <a href="./footers/2-split-simple/html/sections/social-icons.html.twig" target="_blank">this file content</a>',
-                        'Replace scss/layout/footer.scss with <a href="./footers/2-split-simple/scss/layout/footer.scss" target="_blank">this file content</a>',
+                        'Replace html/sections/footer.html.twig with <a href="./footers/2-split-simple/html/sections/footer.html.twig" target="_blank" download>this file content</a>',
+                        'Replace html/sections/social-icons.html.twig with <a href="./footers/2-split-simple/html/sections/social-icons.html.twig" target="_blank" download>this file content</a>',
+                        'Replace scss/layout/footer.scss with <a href="./footers/2-split-simple/scss/layout/footer.scss" target="_blank" download>this file content</a>',
                     ],
                 },
                 '4-col-links': {
@@ -101,8 +101,8 @@ new Vue({
                     image: './footers/4-col-links-list/screenshots/footer-4-col-links-list.png',
                     instructions: [
                         'In the rivendell template, replace the following files:',
-                        'Replace html/sections/footer.html.twig with <a href="./footers/4-col-links-list/html/sections/footer.html.twig" target="_blank">this file content</a>',
-                        'Replace scss/layout/footer.scss with <a href="./footers/4-col-links-list/scss/layout/footer.scss" target="_blank">this file content</a>',
+                        'Replace html/sections/footer.html.twig with <a href="./footers/4-col-links-list/html/sections/footer.html.twig" target="_blank" download>this file content</a>',
+                        'Replace scss/layout/footer.scss with <a href="./footers/4-col-links-list/scss/layout/footer.scss" target="_blank" download>this file content</a>',
                     ],
                 },
             }
