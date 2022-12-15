@@ -1,0 +1,78 @@
+
+<!-- Footer content -->
+<footer id="footer" role="contentinfo" class="layout-container">
+    <div class="layout-container-inner">
+
+        <div class="pure-g footer-link-lists">
+            <div class="pure-u-1 pure-u-sm-1-2 pure-u-md-1-4">
+                <h3>Information</h3>
+                <ul>
+                    {{ footer.menu }}
+                </ul>
+            </div>
+
+            <div class="pure-u-1 pure-u-sm-1-2 pure-u-md-1-4">
+                <h3>Categories</h3>
+                <ul>
+                    {# list all top level categories #}
+                    {% set categories = api('categories', {parent: 0}) %}
+                    {% for category in categories %}
+                        <li><a href="{{ category.link }}">{{ category.name }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <div class="pure-u-1 pure-u-sm-1-2 pure-u-md-1-4">
+                <h3>Account</h3>
+                <ul>
+                    <li><a href="/customer_home.php?p=previous_buys">Track Orders</a></li>
+
+                    {% if user.is_logged_in %}
+                        <li><a href="/admin/">Your Account</a></li>
+                        <li><a href="/pages/logout.php">Logout</a></li>
+                    {% else %}
+                        <li><a href="/login.php">Login</a></li>
+                        <li><a href="/register.php">Register</a></li>
+                    {% endif %}
+
+                    {% if TERMS_POLICY_URL %}<li><a href="{{ TERMS_POLICY_URL }}">Terms &amp; Conditions</a></li>{% endif %}
+                    {% if PRIVACY_POLICY_URL %}<li><a href="{{ PRIVACY_POLICY_URL }}">Privacy Policy</a></li>{% endif %}
+                    <li><a title="Review your cookie settings with our site." onclick="CookiePolicy.show(); return false;" href="#">Cookie Policy &amp; Settings</a></li>
+                </ul>
+            </div>
+
+            <div class="pure-u-1 pure-u-sm-1-2 pure-u-md-1-4">
+                <h3>Contact</h3>
+                <ul>
+                    <li>
+                        <i class="fa fa-map-marker"></i> {{ company.address_line }}
+                    </li>
+                    <li>
+                        <i class="fa fa-phone"></i> <a href="tel:{{ company.phone_number }}">{{ company.phone_number }}</a>
+                    </li>
+                    <li>
+                        <i class="fa fa-envelope"></i> <a href="mailto:{{ company.email | safe_email }}">{{ company.email | safe_email }}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- social icons -->
+        <div class="footer-social-links">
+            {% include "html/sections/social-icons.html.twig" %}
+        </div>
+
+        <hr>
+
+        <!-- copyright notice -->
+        <div class="footer-copyright">
+            {{ COPYRIGHT_L }} {{ date.year }} {{ company.name }}. {{ FOOTER_ACM_LINE_1 }} {{ FOOTER_ACM_LINE_2 }} |
+            Registered in England and Wales
+            - Company Number: {{ company.company_reg_num }}
+            - VAT Number: {{ company.vat_num }}
+        </div>
+
+    </div>
+</footer>

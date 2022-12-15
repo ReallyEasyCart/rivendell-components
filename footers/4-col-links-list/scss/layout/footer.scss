@@ -12,6 +12,10 @@
     color: $footer-text-color;
 }
 
+#footer hr {
+    margin: 0;
+}
+
 // remove the default darker background colour responsive-base gives by default
 .footer-social-links,
 .footer-copyright {
@@ -22,18 +26,25 @@
     text-align: center;
 }
 
-// show the footer links side by side as inline-blocks
-.footer-link-list {
+// show the footer links as simple blocks
+.footer-link-lists {
+    margin-bottom: 1em;
+}
+.footer-link-lists ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
-.footer-link-list,
-.footer-link-list li,
-.footer-link-list ul,
-.footer-link-list a {
+.footer-link-lists,
+.footer-link-lists li,
+.footer-link-lists ul,
+.footer-link-lists a {
     display: block;
 }
-.footer-link-list ul {
+.footer-link-lists a[href^="mailto:"],
+.footer-link-lists a[href^="tel:"] {
+    display: inline-block;
+}
+.footer-link-lists ul ul {
     padding-left: 1em;
 }
